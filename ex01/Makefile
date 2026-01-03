@@ -3,21 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: majkijew <majkijew@student.42heilbronn.    +#+  +:+       +#+         #
+#    By: majkijew <majkijew@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/18 11:01:48 by majkijew          #+#    #+#              #
-#    Updated: 2025/12/24 01:13:09 by majkijew         ###   ########.fr        #
+#    Updated: 2026/01/03 16:38:14 by majkijew         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #change header later
 
 CXX := c++
-# CXXFLAGS := -Wall -Wextra -Werror -std=c++98
-CXXFLAGS := 
+CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
 NAME := zombie
-SRC := main.cpp Zombie.cpp randomChump.cpp 
+SRC := main.cpp Zombie.cpp ZombieHorde.cpp
 
 OBJ_DIR := obj
 OBJ := $(SRC:%.cpp=$(OBJ_DIR)/%.o)

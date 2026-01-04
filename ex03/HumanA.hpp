@@ -6,7 +6,7 @@
 /*   By: majkijew <majkijew@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 19:31:44 by majkijew          #+#    #+#             */
-/*   Updated: 2026/01/04 14:15:54 by majkijew         ###   ########.fr       */
+/*   Updated: 2026/01/04 15:30:53 by majkijew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,10 @@
 class HumanA{
     private: 
         std::string _name;
-        Weapon      _type;
+        Weapon&      _type;
     public:
-        HumanA();
+        HumanA( std::string name, Weapon& type );
         ~HumanA();
-        void setName( std::string name);
-        std::string getName();
-        void setWeapon( Weapon type );
-        std::string getWeapon( );
         void attack();
 };
 

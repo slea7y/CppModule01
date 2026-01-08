@@ -6,10 +6,9 @@
 #    By: majkijew <majkijew@student.42heilbronn.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/18 11:01:48 by majkijew          #+#    #+#              #
-#    Updated: 2026/01/05 17:18:11 by majkijew         ###   ########.fr        #
+#    Updated: 2026/01/08 13:50:33 by majkijew         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98

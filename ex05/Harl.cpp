@@ -6,11 +6,15 @@
 /*   By: majkijew <majkijew@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:17:51 by majkijew          #+#    #+#             */
-/*   Updated: 2026/01/05 19:39:42 by majkijew         ###   ########.fr       */
+/*   Updated: 2026/01/08 16:35:51 by majkijew         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+Harl::Harl(){}
+
+Harl::~Harl() {}
 
 void Harl::debug( void ) {
 	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-special- ketchup burger. I really do!\n";
@@ -28,9 +32,34 @@ void Harl::error( void ) {
 	std::cout << "This is unacceptable! I want to speak to the manager now.\n";
 }
 
+// void Harl::complain( std::string level ) {
+	
+// 	if ("DEBUG" == level)
+// 		debug();
+// 	if ("INFO" == level)
+// 		info();
+// 	if ("WARNING" == level)
+// 		warning();
+// 	if ("ERROR" == level)
+// 		error();
+// }
+
 void Harl::complain( std::string level ) {
-	debug();
-	info();
-	warning();
-	error();
+	typedef void (Harl::*Fp)();
+	
+	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	Fp functions[] = {
+		&Harl::debug,
+		&Harl::info,
+		&Harl::warning,
+		&Harl::error,
+	};
+
+	for (int i = 0; i < 4; i++) {
+		if (levels[i] == level) {
+			(this->*functions[i])();
+			break;
+		}
+	}
 }
